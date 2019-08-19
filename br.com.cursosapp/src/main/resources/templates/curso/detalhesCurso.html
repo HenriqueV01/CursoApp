@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultra.net.nz/thymeleaf/layout">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="bootstrap/fonts/icomoon/style.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">  
+  <link rel="stylesheet" href="bootstrap/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="bootstrap/fonts/flaticon/font/flaticon.css">  
+  <link rel="stylesheet" href="bootstrap/css/style.css">
+	<title>Cursos</title>
+</head>
+<body>
+	<div align="center">
+	<h1>Curso</h1>
+	</div>
+	<div align="center">
+		<h3><a class="btn btn-primary" role="button" href="/cursos">Lista de Cursos</a></h3>
+	</div>	
+		<div th:each=curso:${curso} class="container">			
+			<p>Nome: <span th:text="${curso.nome}"></span></p>
+			<p>Data Inclusão:  <span th:text="${curso.dataInclusao}"></span></p>
+			<p>Data Alteração: <span th:text="${curso.dataAlteracao}"></span></p>			
+		</div>
+</body>
+</html>
